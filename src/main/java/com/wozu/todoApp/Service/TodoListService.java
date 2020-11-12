@@ -30,7 +30,7 @@ public interface TodoListService {
 
     // update by Id
 
-    JSONObject updateTodoListById(UUID id, TodoList todoList);
+    JSONObject updateTodoListById(UUID id, TodoList newTodoList);
 
     // post
 
