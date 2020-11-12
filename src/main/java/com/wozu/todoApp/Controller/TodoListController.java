@@ -40,8 +40,7 @@ public class TodoListController {
 
     @PutMapping("/put/{title}")
     public JSONObject putTodoListByTitle(@PathVariable String title, @RequestBody TodoList newTodoList) {
-        logger.debug("Request Body", newTodoList);
-        System.out.println("My Request Body: "+ newTodoList);
+        logger.info(newTodoList.toString());
         return todoListService.updateTodoListByTitle(title, newTodoList);
     }
 
