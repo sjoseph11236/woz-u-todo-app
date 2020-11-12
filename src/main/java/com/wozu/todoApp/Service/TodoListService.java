@@ -28,9 +28,13 @@ public interface TodoListService {
 
     JSONObject deleteTodoListById(UUID id);
 
+    JSONObject deleteTodoListByTitle(String title);
+
     // update by Id
 
     JSONObject updateTodoListById(UUID id, TodoList newTodoList);
+
+    JSONObject updateTodoListByTitle(String title, TodoList newTodoList);
 
     // post
 

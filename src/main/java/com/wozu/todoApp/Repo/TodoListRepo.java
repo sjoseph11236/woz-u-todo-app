@@ -9,5 +9,6 @@ import java.util.UUID;
 public interface TodoListRepo extends CrudRepository<TodoList, UUID> {
 
     Optional<TodoList> findTodoListByTitle(String title);
+    Optional<TodoList> deleteTodoListByTitle(String title);
 
 }

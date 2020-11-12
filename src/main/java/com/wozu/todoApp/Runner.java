@@ -21,7 +21,6 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        seed();
         if(taskRepo.count() == 0 && todoListRepo.count() == 0) {
             TodoList newTodoList = new TodoList("Chores");
 
@@ -35,10 +34,4 @@ public class Runner implements CommandLineRunner {
             System.out.println("Database seeded");
         }
     }
-
-//    public static void seed() {
-//
-//
-//    }
-
 }
