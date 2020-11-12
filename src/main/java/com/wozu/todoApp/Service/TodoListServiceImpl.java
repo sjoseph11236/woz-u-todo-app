@@ -12,7 +12,7 @@ import java.util.UUID;
 @Service
 public class TodoListServiceImpl implements TodoListService {
 
-    TodoListRepo todoListRepo;
+    final TodoListRepo todoListRepo;
 
     public TodoListServiceImpl(TodoListRepo todoListRepo){
         this.todoListRepo = todoListRepo;
