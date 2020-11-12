@@ -28,7 +28,7 @@ public class TodoListController {
     }
 
     @GetMapping("/get/all")
-    public Iterable<TodoList> getAllTodoLists(){
+    public Iterable<TodoList> getAllTodoLists() {
         return todoListService.getAllTodoLists();
     }
 
@@ -51,7 +51,7 @@ public class TodoListController {
     }
 
     @DeleteMapping("/delete/all")
-    public JSONObject deleteAllTodoLists(){
+    public JSONObject deleteAllTodoLists() {
         return todoListService.deleteAllTodoLists();
     }
 }
