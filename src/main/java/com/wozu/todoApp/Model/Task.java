@@ -18,6 +18,11 @@ public class Task {
 
     public Task() {}
 
+    public Task(TodoList todoList, String description) {
+        this.todoList = todoList;
+        this.description = description;
+    }
+
     public Task(String description) {
         this.description = description;
     }
