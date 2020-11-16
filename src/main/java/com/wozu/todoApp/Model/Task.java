@@ -23,15 +23,23 @@ public class Task {
     public Task(TodoList todoList, String description) {
         this.todoList = todoList;
         this.description = description;
+        setId(UUID.randomUUID());
+
+
     }
 
 //constructor - 1 parameter
     public Task(String description) {
         this.description = description;
+        setId(UUID.randomUUID());
     }
 
     public UUID getId() {
         return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
     }
 
     public TodoList getTodoList() {
