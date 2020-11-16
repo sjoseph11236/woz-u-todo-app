@@ -15,14 +15,17 @@ public class Task {
     private TodoList todoList;
     private String description;
     private Boolean isComplete = false;
-
+//dafualt constructor - empty parameters
     public Task() {}
 
+
+// constructor - 2 parameters
     public Task(TodoList todoList, String description) {
         this.todoList = todoList;
         this.description = description;
     }
 
+//constructor - 1 parameter
     public Task(String description) {
         this.description = description;
     }
