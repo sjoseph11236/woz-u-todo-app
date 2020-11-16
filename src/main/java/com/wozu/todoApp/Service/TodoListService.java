@@ -34,6 +34,6 @@ public interface TodoListService {
 
     // post
 
-    JSONObject postTodoList(TodoList todoList);
+    TodoList postTodoList(TodoList todoList);
 
 }
