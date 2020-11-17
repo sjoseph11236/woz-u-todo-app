@@ -3,7 +3,6 @@ package com.wozu.todoApp.Service;
 import com.wozu.todoApp.Model.TodoList;
 import com.wozu.todoApp.Repo.TodoListRepo;
 import org.json.simple.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -66,11 +65,11 @@ public class TodoListServiceImpl implements TodoListService {
     }
 
     @Override
-    public JSONObject postTodoList(TodoList todoList) {
-       todoListRepo.save(todoList);
-
-        JSONObject response =  new JSONObject();
-        response.put("message", "posted todo list!");
-        return response;
+    public TodoList postTodoList(TodoList todoList) {
+//       todoListRepo.save(todoList);
+//
+//        JSONObject response =  new JSONObject();
+//        response.put("message", "posted todo list!");
+        return todoListRepo.save(todoList);
     }
 }

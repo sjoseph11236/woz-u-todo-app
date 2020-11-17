@@ -24,6 +24,7 @@ public class TodoList {
 
     public TodoList(String title){
         this.title = title;
+        setId(UUID.randomUUID());
     }
 
     public UUID getId() {
