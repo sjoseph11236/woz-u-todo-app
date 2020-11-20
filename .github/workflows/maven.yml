@@ -30,7 +30,7 @@ jobs:
         with:
           java-version: 11
       - name: Verify MySql
-        run: mariadb -uroot -ppassword -e "SHOW DATABASES"
+        run: mariadb -u root -p password -e "SHOW DATABASES"
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
