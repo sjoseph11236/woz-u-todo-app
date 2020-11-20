@@ -1,6 +1,5 @@
 package com.wozu.todoApp.mock;
 
-import com.wozu.todoApp.Config.PropConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 
 @SpringBootTest
-//@AutoConfigureMockMvc()
+@AutoConfigureMockMvc()
 public class MvcMock {
 
     @Autowired
