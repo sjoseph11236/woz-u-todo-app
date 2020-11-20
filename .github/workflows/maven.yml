@@ -29,8 +29,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
-      - name: Start  Mysql service
-        - systemctl start mariadb
+      - name: Start Mysql service
+        run: systemctl start mariadb
       - name: Verify MySql
         run: mysql --port 3306 -u root -p password -e "SHOW DATABASES"
       - name: Build with Maven
