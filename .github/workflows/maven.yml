@@ -30,7 +30,7 @@ jobs:
         with:
           java-version: 11
       - name: Verify MySql
-        run: mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports['3306'] }} -uroot -ppassword -e "SHOW DATABASES"
+        run: mysql --host 127.0.0.1 --port 3306 -u root -p password -e "SHOW DATABASES"
       - name: Build with Maven
         run: mvn -B package --file pom.xml
 
