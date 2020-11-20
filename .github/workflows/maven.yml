@@ -18,8 +18,8 @@ jobs:
         ports:
           - 3306
         env:
-          MYSQL_USER: ${{APP_DATASOURCE_USERNAME}}
-          MYSQL_PASSWORD: ${{APP_DATASOURCE_PASSWORD}}
+          MYSQL_USER: root
+          MYSQL_PASSWORD:
           MYSQL_DATABASE: wozudemo
 
     steps:
