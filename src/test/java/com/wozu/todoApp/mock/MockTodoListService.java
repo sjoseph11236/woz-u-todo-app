@@ -30,10 +30,6 @@ public class MockTodoListService {
     @Mock
     TodoListService service;
 
-    // dummy service for testing
-    @Mock
-    NumService numService;
-
     TodoList list;
 
     @BeforeEach
@@ -41,14 +37,6 @@ public class MockTodoListService {
         list = new TodoList("hello");
     }
 
-    @Test
-    public void whenCallingMethodThenReturnFive(){
-//        given(numService.returnFive()).willReturn(5);
-        when(numService.returnFive())
-                .thenReturn(5);
-
-        assertEquals(numService.returnFive(), 5);
-    }
 
     @Test
     public void whenCallingGetByIdMethodThenReturnId(){
