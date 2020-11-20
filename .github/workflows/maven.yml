@@ -18,9 +18,9 @@ jobs:
         ports:
           - 3306
         env:
-          MYSQL_USER: ${APP_DATASOURCE_USERNAME}
-          MYSQL_PASSWORD: ${APP_DATASOURCE_PASSWORD}
-          MYSQL_DATABASE: ${DATABASE_NAME}
+          MYSQL_USER: ${{spring.datasource.username}}
+          MYSQL_PASSWORD: ${{spring.datasource.password}}
+          MYSQL_DATABASE: wozudemo
 
     steps:
       - uses: actions/checkout@v2
