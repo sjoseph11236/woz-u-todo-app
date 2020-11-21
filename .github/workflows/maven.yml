@@ -30,7 +30,7 @@ jobs:
         with:
           java-version: 11
       - name: Build with Maven
-        run: sudo systemctl start mariadb /
+        run: sudo service mariadb start /
           && mvn -B package --file pom.xml
       - env:
         MYSQL_USER: root
