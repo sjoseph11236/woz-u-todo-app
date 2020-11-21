@@ -31,7 +31,7 @@ jobs:
           java-version: 11
       - name: Build with Maven
         run: mvn -B package --file pom.xml
-      - env:
+        env:
         MYSQL_USER: root
         MYSQL_PASSWORD: password
         MYSQL_DATABASE: wozudemo
