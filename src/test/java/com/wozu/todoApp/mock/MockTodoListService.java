@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.Optional;
 
@@ -24,15 +26,12 @@ import static org.mockito.Mockito.when;
 
 // this annotation allows Mockito to work with JUnit5
 @ExtendWith(MockitoExtension.class)
+@ActiveProfiles("test")
 public class MockTodoListService {
 
     // we don't have to do anything extra with JUnit5, just simply invoke the annotation
     @Mock
     TodoListService service;
-
-    // dummy service for testing
-    @Mock
-    NumService numService;
 
     TodoList list;
 
@@ -41,14 +40,6 @@ public class MockTodoListService {
         list = new TodoList("hello");
     }
 
-    @Test
-    public void whenCallingMethodThenReturnFive(){
-//        given(numService.returnFive()).willReturn(5);
-        when(numService.returnFive())
-                .thenReturn(5);
-
-        assertEquals(numService.returnFive(), 5);
-    }
 
     @Test
     public void whenCallingGetByIdMethodThenReturnId(){
