@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      mariadb:
-        image: mariadb:latest
+      mysql:
+        image: mysql:latest
         env:
           MYSQL_USER: root
 #          MYSQL_PASSWORD: root
