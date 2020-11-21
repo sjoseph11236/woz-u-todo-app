@@ -15,7 +15,7 @@ jobs:
     services:
       mysql:
         image: mysql
-        environment:
+        env:
           MYSQL_USER: root
           MYSQL_PASSWORD: root
           MYSQL_DATABASE: wozudemo
