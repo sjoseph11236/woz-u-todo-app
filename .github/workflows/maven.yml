@@ -17,6 +17,7 @@ jobs:
         image: mysql
         env:
           MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: wozudemo
           MYSQL_PORT: 3306:3306
         options: --health-cmd "mysqladmin ping" --health-interval 10s --health-timeout 5s --health-retries 10
 
@@ -29,13 +30,12 @@ jobs:
         with:
           java-version: 11
       - name: Build with Maven
-        run: sudo service mariadb start /
-          && mvn -B package --file pom.xml
-#      - env:
-#        MYSQL_USER: root
-#        MYSQL_PASSWORD: root
-#        MYSQL_DATABASE: wozudemo
-#        MYSQL_PORT: 3306
+        run: mvn -B package --file pom.xml
+      - env:
+        MYSQL_USER: root
+        MYSQL_PASSWORD: password
+        MYSQL_DATABASE: wozudemo
+        MYSQL_PORT: 3306
 
 
 
