@@ -32,9 +32,10 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
         env:
-        MYSQL_PASSWORD: password
-        MYSQL_DATABASE: wozudemo
-        MYSQL_PORT: 3306
+          MYSQL_USER: root
+          MYSQL_PASSWORD: password
+          MYSQL_DATABASE: wozudemo
+          MYSQL_PORT: 3306
 
 
 
