@@ -24,8 +24,8 @@ jobs:
 
 
     steps:
-      - name: connect to mysql
-        - env:
+       name: Connect to mysql
+      - env:
             MYSQL_USER: root
             MYSQL_PASSWORD: root
             MYSQL_DATABASE: wozudemo
